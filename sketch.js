@@ -8,20 +8,20 @@ let runSpriteSheet, dieSpriteSheet, leftSpriteSheet, rightSpriteSheet, enemySpri
 let runFrames = [], dieFrames = [], leftFrames = [], rightFrames = [], enemyFrames = [];
 
 window.setup = async function () {
-    bgSound = await loadSound("../assets/sounds/bgmusic.mp3");
-    gameOverSound = await loadSound("../assets/sounds/gameover.mp3");
-    movementSound = await loadSound("../assets/sounds/movement.mp3");
+    bgSound = await loadSound("assets/sounds/bgmusic.mp3");
+    gameOverSound = await loadSound("assets/sounds/gameover.mp3");
+    movementSound = await loadSound("assets/sounds/movement.mp3");
 
     // spritesheet setup
-    runSpriteSheet = await loadImage("../assets/sprites/run.png");
+    runSpriteSheet = await loadImage("assets/sprites/run.png");
     runFrames = getFrames(runSpriteSheet, 140, 100);
-    dieSpriteSheet = await loadImage("../assets/sprites/die.png");
+    dieSpriteSheet = await loadImage("assets/sprites/die.png");
     dieFrames = getFrames(dieSpriteSheet, 140, 100);
-    leftSpriteSheet = await loadImage("../assets/sprites/leftdash.png");
+    leftSpriteSheet = await loadImage("assets/sprites/leftdash.png");
     leftFrames = getFrames(leftSpriteSheet, 140, 100);
-    rightSpriteSheet = await loadImage("../assets/sprites/rightdash.png");
+    rightSpriteSheet = await loadImage("assets/sprites/rightdash.png");
     rightFrames = getFrames(rightSpriteSheet, 140, 100);
-    enemySpriteSheet = await loadImage("../assets/sprites/enemy.png");
+    enemySpriteSheet = await loadImage("assets/sprites/enemy.png");
     enemyFrames = getFrames(enemySpriteSheet, 63, 48);
 
     createCanvas(800, 600);
@@ -30,7 +30,7 @@ window.setup = async function () {
     rectMode(CENTER);
     imageMode(CENTER);
     colorMode(RGB);
-    titleFont = await loadFont("../assets/Oi-Regular.ttf");
+    titleFont = await loadFont("assets/Oi-Regular.ttf");
     textFont(titleFont);
 
     bgColor1 = color(197, 55, 204);
@@ -78,8 +78,6 @@ window.mouseClicked = function () {
             && mouseY > ((height / 2 + 135) - height / 16) && mouseY < ((height / 2 + 135) + height / 16)) {
             menu = 2;
         }
-    } else if (menu == 1) {
-        //eventually logic
     } else if (menu == 2) {
         if (mouseX > (width / 2 - width / 8) && mouseX < (width / 2 + width / 8)
             && mouseY > ((height / 2 + 110) - height / 16) && mouseY < ((height / 2 + 110) + height / 16)) {
