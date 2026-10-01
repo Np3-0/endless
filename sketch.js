@@ -179,7 +179,9 @@ function runMenu() {
 
         textSize(24);
         text("Start", width / 2, height / 2 + 40);
-        text("Settings", width / 2, height / 2 + 145);
+        text("Credits", width / 2, height / 2 + 145);
+        fill(255, 219, 131);
+        text("WASD/Arrow Keys to control!", width/2, height * 0.9);
     }
 }
 
